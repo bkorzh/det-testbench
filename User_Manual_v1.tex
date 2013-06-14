@@ -1,10 +1,11 @@
 \documentclass{article}
 
 \usepackage{graphicx}
+\usepackage{subfig}
 
 \title{Test Bench Manual}
-\author{Boris Korzh}
-\date{29th October 2012}
+\author{Boris Korzh, Tommaso Lunghi}
+\date{13th June 2013}
 \begin{document}
 \maketitle
 \begin{center}
@@ -19,7 +20,7 @@
 \hline
 \emph{Parameter} & \emph{Value} \\ \hline
 {\bf General } &   \\ \hline
-Detector Type & Gated Mode Detectors \\ \hline
+Detector Type & Gated Mode Detectors, Free-running detectors \\ \hline
 Detector Trigger Input & TTL, NIM, ECL \\ \hline
 
 {\bf Pulse Generator } &   \\ \hline
@@ -38,32 +39,47 @@ Signal Input & TTL, NIM, ECL \\ \hline
 \end{center}
 % == Setup
 
-
+\section{Preliminary Remark}
+The test bench setup can characterize the efficiency, dark-count rate and afterpulsing of gated detectors. Moreover it can also characterize efficiency and dark count rate of free-running detector if the afterpulsing probability and the dead time are provided by the user.
+Before to do the characterizations check that the right setup is installed: to characterize a gated detector install the setup 1 (Sec.\ref{Sec:gated}). For a free-running detector install setup 2 (Sec.\ref{Sec:free-running}).
 \section{Setup}
 
-\begin{figure}
+\begin{figure}[htbp]
 \centering
-\includegraphics[width=12cm]{images/SetupGated2.png}
-\caption{Setup of test bench.}
-\label{setup}
+\includegraphics[width=7.8cm]{images/SetupGated2.png}
+\caption{Setup 1 for characterizations of gated detectors}
+\label{fig:gatedsetup1}
 \end{figure}
-The test bench setup is shown in Figure~\ref{setup}. The whole system is synchronized from the Pulse Generator (SRS). This generates trigger pulses which control all of the instruments. The optical part of the system is triggered by the $T_{0}$ signal which activates the pulsed laser source. The optical signal is split at a coupler with one part going to a power meter, whilst the other is attenuated accordingly with a variable and a fixed attenuator, to achieve the required number of photons per pulse. The variable attenuator also has a shutter which is activated during dark count characterization.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=7.8cm]{images/SetupFree_Running.png}
+\caption{Setup 2 for characterizations of free-running detectors}
+\label{fig:frdsetup2}
+\end{figure}
+  
 
-During efficiency characterization and scanning of the gate shape, only the CD signal triggers the detector gate, the $AB$ signal is set to zero. The delay between the $T_0$ and $CD$ pulses must be synchronized such that the light pulse coincides with the correct point of the detector gate. The detector output is then counted with an external counter, as a coincidence with a delayed $CD$ pulse. 
 
-Afterpulse characterization uses the double window method, hence both the $AB$ and $CD$ signals are used to trigger the detector. The laser pulse in this case is synchronized with the gate generated due to the $AB$ pulse, whilst no light is sent onto the detector during the $CD$ gate. Only the detections generated during the $CD$ gate are registered by the external counter, hence by varying the delay between $AB$ and $CD$ it is possible to evaluate the afterpulse probability as a function of deadtime. In order to ensure that there is a detection in every $AB$ window, the average photon number of photons per pulse is increased, to cause saturation.  
+
+
 
 % === Software
-
+\newpage
 \section{Software}
 
-The main test bench control software has a Python user interface and comprises of 4 tabs, which are illustrated in Figures \ref{tab1}, \ref{tab2}, \ref{tab3} and \ref{tab4}. 
+The main test bench control software has a Python user interface and comprises of 4 tabs, which are illustrated in Figures \ref{tab1}, \ref{sub-tab} \ref{tab2}, \ref{tab3}, \ref{tab4} and\ref{tab5}. 
 
 \begin{figure}
 \centering
 \includegraphics[width=7.8cm]{images/tab1.png}
 \caption{Tab 1 of main control program. Optical pulse attenuation settings.}
 \label{tab1}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=7.8cm]{images/subtab.png}
+\caption{Sub-tab of main control program. In this sub-tab you choose the photon settings for the characterizations.}
+\label{sub-tab}
 \end{figure}
 
 \begin{figure}
@@ -87,9 +103,67 @@ The main test bench control software has a Python user interface and comprises o
 \label{tab4}
 \end{figure}
 
-% ==== Initialisation 
+\begin{figure}
+\centering
+\includegraphics[width=7.8cm]{images/tab5.png}
+\caption{Tab 5 of main control program. Free-running characterization.}
+\label{tab5}
+\end{figure}
 
-\section{Initialization}
+% ==== Initialisation 
+\section*{Preliminary}
+\section{PC}
+
+\begin{itemize}
+\item
+Turn on the PC and log on. 
+\begin{itemize}
+\item
+Username = TESTBENCH
+\item
+Password = tb
+\end{itemize}
+
+\item
+Open the {Terminal}
+\begin{itemize}
+\item 
+\emph{Applications $>$ System Tools $>$ Terminal}
+\end{itemize}
+
+\item
+Change to correct directory:
+\begin{itemize}
+\item
+Command: \emph{cd Desktop/Testbench\_Prog/v2.0}
+\end{itemize}
+
+\item
+View files in directory:
+\begin{itemize}
+\item
+Command: \emph{ls}
+\end{itemize}
+
+\item
+Select the latest version of the program and run it (xxxx\_xx\_xx corresponds to the program modification date):
+\begin{itemize}
+\item
+Command: \emph{python run\_main\_xxxx\_xx\_xx}
+\end{itemize}
+
+\end{itemize}
+
+
+\section{Gated detector}
+\section*{Gated setups}\label{Sec:gated}
+The test bench setup is shown in Figure~\ref{fig:gatedsetup1}. The whole system is synchronized from the Pulse Generator (SRS). This generates trigger pulses which control all of the instruments. The optical part of the system is triggered by the $T_{0}$ signal which activates the pulsed laser source. The optical signal is split at a coupler with one part going to a power meter, whilst the other is attenuated accordingly with a variable and a fixed attenuator, to achieve the required number of photons per pulse. The variable attenuator also has a shutter which is activated during dark count characterization.
+
+During efficiency characterization and scanning of the gate shape, only the CD signal triggers the detector gate, the $AB$ signal is set to zero. The delay between the $T_0$ and $CD$ pulses must be synchronized such that the light pulse coincides with the correct point of the detector gate. The detector output is then counted with an external counter, as a coincidence with a delayed $CD$ pulse. 
+
+Afterpulse characterization uses the double window method, hence both the $AB$ and $CD$ signals are used to trigger the detector. The laser pulse in this case is synchronized with the gate generated due to the $AB$ pulse, whilst no light is sent onto the detector during the $CD$ gate. Only the detections generated during the $CD$ gate are registered by the external counter, hence by varying the delay between $AB$ and $CD$ it is possible to evaluate the afterpulse probability as a function of deadtime. In order to ensure that there is a detection in every $AB$ window, the average photon number of photons per pulse is increased, to cause saturation.  
+
+\subsection{Initialization}
 This section describes the procedure for the initialization of all of the test bench components. When characterizing a detector, it is preferable to carry out the tests in the order that they appear in this manual, since some of the values obtained in a given section are often required at a later stage for a different parameter characterization.
 
 % == External Components
@@ -113,14 +187,14 @@ Power ON all of the remaining components in the following order:
 \begin{itemize}
 \item{Detector to be tested}
 \item{Power meter/Attenuator}
-\item{Laser}
+\item{Laser$>$. Turn the knob selector to \it{Petit pulse}. WAIT $\sim$30 minutes to stabilize the laser outcoming power.}
 \item{SRS Pulse Generator}
 \item{Agilent Counter}
 \item{Electronic component rack}
 \end{itemize}
 
 \item
-After the initial loading, the Power Meter/Attenuator meter display will remain in the terminal command view. Use it's dedicated keyboard (EXFO PMD Keyboard) to to enter:
+After the initial loading, the Power Meter/Attenuator meter display will remain in the terminal command view. Use it's dedicated keyboard (EXFO PMD Keyboard) to enter:
 
 \begin{itemize}
 
@@ -133,50 +207,7 @@ The windows display should now load on the screen.
 
 % == PC and Software
 
-\subsection{PC and Software}
-
-\begin{itemize}
-\item
-Turn on the PC and log on. 
-\begin{itemize}
-\item
-Username = TESTBENCH
-\item
-Password = tb
-\end{itemize}
-
-\item
-Open the {Terminal}
-\begin{itemize}
-\item 
-\emph{Applications $>$ System Tools $>$ Terminal}
-\end{itemize}
-
-\item
-Change to correct directory:
-\begin{itemize}
-\item
-Command: \emph{cd Desktop/Testbench\_Prog}
-\end{itemize}
-
-\item
-View files in directory:
-\begin{itemize}
-\item
-Command: \emph{ls}
-\end{itemize}
-
-\item
-Select the latest version of the program and run it (xxxx\_xx\_xx corresponds to the program modification date):
-\begin{itemize}
-\item
-Command: \emph{python run\_main\_xxxx\_xx\_xx}
-\end{itemize}
-
-\end{itemize}
-
-
-
+\subsection{Software}
 
 
 % section for software initialisation instructions
@@ -198,14 +229,19 @@ Select \emph{Data} folder and confirm
 
 \item
 Set the attenuator parameters. Remain in \emph{Tab 1} (default values):
+\end{itemize}
+
 \begin{itemize}
 \item
-\emph{Laser Freq.}: 10,000
+Press: \emph{Tab 1 $>$ Choose input light}. The sub-tab shown in Fig.\ref{sub-tab} appears.
+\emph{Laser Freq.}: Choose gating, then choose the laser frequency. Standard settings: Frequency: 10000
 \item
-\emph{Ph. per pulse}: 1 (for Efficiency, Dark Count and Gate Shape measurements) or 50 (for Afterpulsing characterization). 
+\emph{Ph. per pulse}: choose the desired number of photons per pulse. Standard settings: Photon /Pulse: 0.0.
+{ \it To reduce the errors originated by multi-photon pulses is better to use small values of photons/pulse (between 0.1 and 0.5) for Efficiency and Gate Shape measurements.} For the afterpulsing characterization set 50.
 \item
-\emph{Fix Att.}: -25.50
-\end{itemize}
+Press Ok.
+\item
+\emph{Fix Att.}: -25.50 {\it This value is the value of the fixed attenuator just before the detector. It has been characterized but it fluctuates ($\sim$ 10\% of incertitude on the number of photons) every time that the attenuator is disconnected from the fiber. For more precise characterization we suggest to characterize this attenuator before to connect it to the detector.}
 \item
 Press \emph{Attenuate}. The expected optical power value will be calculated and the attenuation procedure will begin. Optical power measurements will be logged in the graph. Wait until the power is stabilized (at least 5 consecutive points within a 0.05 dBm range).
 \item
@@ -228,14 +264,13 @@ This section deals with the unknown internal delay of the detector to be tested.
 \begin{itemize}
 \item
 Disconnect the two inputs of the \emph{Coincidence Port} on the Electronic circuit rack, one coming from the \emph{Discriminator} and one from the \emph{Manual Delay} module. 
-
+\item
+\emph{Important}: The signals to be viewed on the oscilloscope in the next step are ECL signals. To visualize these signals an offset blocks should be used, biased at -5.2 V. 
 \item
 View the signals on the oscilloscope. Set the trigger on the CD pulse (coming from the manual delay).
-\begin{itemize}
-\item
-\emph{Important}: Use offset blocks on both inputs of the Oscilloscope, biased at -5.2 V. This is due to the fact that the signals involved are ECL, which might not be within the range of the Oscilloscope.
-\end{itemize}
 
+\end{itemize}
+\begin{itemize}
 \item 
 In \emph{Tab 4}, complete the Stanford Controls (Pulse Generator) settings. 
 \begin{itemize}
@@ -269,11 +304,8 @@ Now decrease the delay once more in order to set the {\bf maximum} possible dela
 \item
 Some detector pulses may occur at a later time, this is normal since a dark detection may occur at different times during the gate.
 \item
-At this point, the main detector pulse might not be within the CD pulse. They should be synchronized with each other. Change the Manual Delay settings so that the CD pulse begins at least 1 ns before the earliest rising edge of the detector output pulse. The traces should look as per Figure \ref{trace}.
-\begin{itemize}
-\item
-\emph{Important}: Disconnect the CD line (Manual Delay) from the Oscilloscope, before changing the delay. Signal spikes from the module during switching may damage the Oscilloscope. 
-\end{itemize}
+At this point, you have to synchronize the signals coming at the inputs of the coincidence ports. To do that, you will probably have to change the settings on the manual delay (see below). {\bf Before to change the settings on the manual delay, disconnect the CD line (Manual Delay) from the Oscilloscope:  signal spikes from the module during switching may damage the Oscilloscope.}
+Change the Manual Delay settings so that the CD pulse begins at least 1 ns before the earliest rising edge of the detector output pulse. The traces should look as per Figure \ref{trace}.
 
 \item
 The latest occurring rising edges of the detector output should be within the CD pulse. If not, adjust the \emph{C-D Width} value accordingly. This will ensure that all of the detections within the detector gate are recorded by the test bench.
@@ -286,8 +318,6 @@ In MainWindow, \emph{Tab 4}, select an \emph{Integration Time} of 1 second and p
 
 \item 
 A count rate value should appear in the bottom right of the display. This value should be approximately equal to the count rate value on the detector display (if available). This indicates that the test bench is set up correctly. 
-
-
 
 \end{itemize} 
  
@@ -376,6 +406,125 @@ The data can be saved using the \emph{Save} option.
 
 \end{itemize}
 
+\section*{Free-Running detector}
+This section describes the procedure for the initialization of all of the test bench components to characterize a free-running detector. For this characterization it is important to know the afterpulsing probability and the dead time. Both can be measured or estimated. If estimated the precision depends on the esteem.
+
+\section{Free-running setups}\label{Sec:free-running}
+The test bench setup is shown in Figure~\ref{fig:frdsetup2}. The incoming light comes from a continuous laser. The optical signal is split at a coupler with one part going to a power meter, whilst the other is attenuated accordingly with a variable and a fixed attenuator, to achieve the required number of photons per second. The variable attenuator also has a shutter which is activated during dark count characterization.
+
+During efficiency characterization the counter collects the detection rate with and without light, estimating the efficiency and the dark count rate including the saturation effects due to the dead time and the extra counts originated by afterpulsing. 
+
+
+% == External Components
+
+\section{External Components}
+
+\begin{itemize}
+
+\item
+Connect the detector output to the Discriminator Analog Input on the Electronic circuit rack.
+
+\item
+Connect the output of the optical attenuator to the detector optical input. 
+
+\item
+Power ON all of the remaining components in the following order:
+
+\begin{itemize}
+\item{Detector to be tested}
+\item{Power meter/Attenuator}
+\item{Laser$>$. Turn the knob selector to \it{Continuous}. WAIT about 30 minutes the laser light to stabilize.}
+\item{SRS Pulse Generator}(Required only to run the program)
+\item{Agilent Counter}
+\end{itemize}
+
+\item
+After the initial loading, the Power Meter/Attenuator meter display will remain in the terminal command view. Use it's dedicated keyboard (EXFO PMD Keyboard) to enter:
+
+\begin{itemize}
+
+\item
+Command: \emph{win}
+\end{itemize}
+The windows display should now load on the screen. 
+
+\end{itemize}
+
+% == PC and Software
+
+\subsection{Software}
+
+
+% section for software initialisation instructions
+
+The following describes the initialization of the user interface software.
+
+\begin{itemize}
+
+\item
+Select path for attenuation log file. In Main Window:
+\begin{itemize}
+\item
+Press: \emph{Tab 1 $>$ Connect}
+\item 
+Select \emph{Data} folder and confirm
+\end{itemize}
+
+\label{sec:soft_init}
+
+\item
+Set the attenuator parameters. Remain in \emph{Tab 1} (default values):
+\end{itemize}
+
+\begin{itemize}
+\item
+Press: \emph{Tab 1 $>$ Choose input light}. The sub-tab shown in Fig.\ref{sub-tab} appears.
+Choose \emph{Free-running}.
+\item
+\emph{Photon/second}: choose the the desired number of photons per second. Standard settings: Photon /Second: 10000.
+\item
+Press Ok.
+\item
+\emph{Fix Att.}: -25.50 {\it This value is the value of the fixed attenuator just before the detector. It has been characterized but its value fluctuates ($\sim$ 10\% of incertitude on the number of photons) every time that the attenuator is disconnected from the fiber. For more precise characterization we suggest to characterize this attenuator before to connect it to the detector.}
+\item
+Press \emph{Attenuate}. The expected optical power value will be calculated and the attenuation procedure will begin. Optical power measurements will be logged in the graph. Wait until the power is stabilized (at least 5 consecutive points within a 0.05 dBm range).
+\item
+If any of the attenuator values need to be changed, \emph{Stop attenuate} must first be pressed. 
+
+\end{itemize}
+
+ 
+\section{Characterization Tests}
+
+\subsection{Efficiency and dark count characterization}
+
+% ==== Scan the gate section
+
+It is now possible to characterize the efficiency and the dark-count probability.
+
+\begin{itemize}
+\item
+In \emph{Page}, introduce dead time, $\tau$, (in microseconds) and afterpulse probability (in percent), $p_{ap}$.
+\item
+In MainWindow, \emph{Tab 4}, select the \emph{Integration Time}. Use longer integration time for smaller errors. The correct value of integration time allows counting of, at least, 1000 detections/noise. 
+\item In MainWindow, \emph{Tab Page}, press Start Characterization. The program measures first the dark-count rate, $dcr$ then the detection rate, $r$. After the Efficiency value, $\eta$ and the dark-count probability, $dcp$ is calculated.
+\item
+It is possible to save the data by selecting the \emph{Save} option. The file name is \emph{FRcharacterizationx\_x\_x\_x\_x.txt} where the x corresponds to the date at the moment of saving. The results will be saved in the same folder of the main program.
+\end{itemize}
+\subsection*{Formulas}
+\begin{itemize}
+\item To calculate the dark count probability (corrected for the dead time), $dcr^*$, in FR mode:
+\begin{equation}
+dcr^*=\frac{dcr}{1-dcr\tau}
+\end{equation}
+\item To calculate the efficiency (corrected for the dead time and afterpulsing)
+\begin{equation}
+\eta=\frac{1}{n}\left(\frac{r}{1-r\tau}-dcr^*\right)\cdot\frac{1}{1+p_{ap}}
+\end{equation}
+where $n$ is the average number of photons per second.
+
+
+\end{itemize}
 
 
 

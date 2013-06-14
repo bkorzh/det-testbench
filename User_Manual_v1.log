@@ -1,0 +1,262 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.7.4)  13 JUN 2013 17:39
+entering extended mode
+**User_Manual_v1.tex
+(D:\Tom-work\Papers\Testbench\det-testbench\User_Manual_v1.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/04/25 v0.06b Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
+)
+\c@ContinuedFloat=\count88
+)
+\c@KVtest=\count89
+\sf@farskip=\skip43
+\sf@captopadj=\dimen112
+\sf@capskip=\skip44
+\sf@nearskip=\skip45
+\c@subfigure=\count90
+\c@subfigure@save=\count91
+\c@lofdepth=\count92
+\c@subtable=\count93
+\c@subtable@save=\count94
+\c@lotdepth=\count95
+\sf@top=\skip46
+\sf@bottom=\skip47
+)
+(D:\Tom-work\Papers\Testbench\det-testbench\User_Manual_v1.aux
+
+LaTeX Warning: Label `sec:soft_init' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen113
+\scratchbox=\box26
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen114
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks16
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+ <images/testbench1.JPG, id=1, 3228.06pt x 4304.08pt>
+File: images/testbench1.JPG Graphic file (type jpg)
+
+<use images/testbench1.JPG>
+Package pdftex.def Info: images/testbench1.JPG used on input line 12.
+(pdftex.def)             Requested size: 284.52756pt x 379.33815pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 19.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Tom-work/Papers/Testbe
+nch/det-testbench/images/testbench1.JPG>]
+<images/SetupGated2.png, id=9, 611.1332pt x 342.37912pt>
+File: images/SetupGated2.png Graphic file (type png)
+
+<use images/SetupGated2.png>
+Package pdftex.def Info: images/SetupGated2.png used on input line 49.
+(pdftex.def)             Requested size: 221.93158pt x 124.33258pt.
+
+<images/SetupFree_Running.png, id=11, 585.83868pt x 211.84143pt>
+File: images/SetupFree_Running.png Graphic file (type png)
+
+<use images/SetupFree_Running.png>
+Package pdftex.def Info: images/SetupFree_Running.png used on input line 55.
+(pdftex.def)             Requested size: 221.93158pt x 80.25166pt.
+ [2 <D:/Tom-work/Papers/Testbench/det-testbench/images/SetupGated2.png>]
+<images/tab1.png, id=19, 442.20206pt x 448.52568pt>
+File: images/tab1.png Graphic file (type png)
+ <use images/tab1.png>
+Package pdftex.def Info: images/tab1.png used on input line 73.
+(pdftex.def)             Requested size: 221.93158pt x 225.11093pt.
+
+<images/subtab.png, id=20, 414.1071pt x 220.30305pt>
+File: images/subtab.png Graphic file (type png)
+ <use images/subtab.png>
+Package pdftex.def Info: images/subtab.png used on input line 80.
+(pdftex.def)             Requested size: 221.93158pt x 118.06769pt.
+
+<images/tab2.png, id=21, 654.94687pt x 639.89063pt>
+File: images/tab2.png Graphic file (type png)
+ <use images/tab2.png>
+Package pdftex.def Info: images/tab2.png used on input line 87.
+(pdftex.def)             Requested size: 221.93158pt x 216.82764pt.
+
+<images/tab3.png, id=22, 594.72188pt x 633.86812pt>
+File: images/tab3.png Graphic file (type png)
+ <use images/tab3.png>
+Package pdftex.def Info: images/tab3.png used on input line 94.
+(pdftex.def)             Requested size: 221.93158pt x 236.53932pt.
+
+<images/tab4.png, id=23, 606.76688pt x 633.86812pt>
+File: images/tab4.png Graphic file (type png)
+ <use images/tab4.png>
+Package pdftex.def Info: images/tab4.png used on input line 101.
+(pdftex.def)             Requested size: 221.93158pt x 231.84837pt.
+
+<images/tab5.png, id=24, 597.6729pt x 661.87276pt>
+File: images/tab5.png Graphic file (type png)
+ <use images/tab5.png>
+Package pdftex.def Info: images/tab5.png used on input line 108.
+(pdftex.def)             Requested size: 221.93158pt x 245.76773pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
+ [3 <D:/Tom-work/Papers/Testbench/det-testbench/images/SetupFree_Running.png> <
+D:/Tom-work/Papers/Testbench/det-testbench/images/tab1.png>] [4 <D:/Tom-work/Pa
+pers/Testbench/det-testbench/images/subtab.png> <D:/Tom-work/Papers/Testbench/d
+et-testbench/images/tab2.png>] [5 <D:/Tom-work/Papers/Testbench/det-testbench/i
+mages/tab3.png> <D:/Tom-work/Papers/Testbench/det-testbench/images/tab4.png>] [
+6 <D:/Tom-work/Papers/Testbench/det-testbench/images/tab5.png>] [7]
+Overfull \hbox (0.93584pt too wide) in paragraph at lines 197--198
+\OT1/cmr/m/n/10 re-main in the ter-mi-nal com-mand view. Use it's ded-i-cated k
+ey-board (EXFO
+ []
+
+<images/trace.JPG, id=51, 4304.08pt x 3228.06pt>
+File: images/trace.JPG Graphic file (type jpg)
+ <use images/trace.JPG>
+Package pdftex.def Info: images/trace.JPG used on input line 257.
+(pdftex.def)             Requested size: 284.52756pt x 213.3777pt.
+
+[8] [9 <D:/Tom-work/Papers/Testbench/det-testbench/images/trace.JPG>] [10]
+[11] [12]
+Overfull \hbox (0.93584pt too wide) in paragraph at lines 442--443
+\OT1/cmr/m/n/10 re-main in the ter-mi-nal com-mand view. Use it's ded-i-cated k
+ey-board (EXFO
+ []
+
+[13] [14] (D:\Tom-work\Papers\Testbench\det-testbench\User_Manual_v1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2400 strings out of 494053
+ 37533 string characters out of 3148601
+ 96598 words of memory out of 3000000
+ 5704 multiletter control sequences out of 15000+200000
+ 8241 words of font info for 29 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 44i,6n,42p,679b,273s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on User_Manual_v1.pdf (14 pages, 7137241 bytes).
+PDF statistics:
+ 115 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
